@@ -1,3 +1,11 @@
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ *
+ * @format
+ * @flow strict-local
+ */
+
 import React from 'react';
 import {
   SafeAreaView,
@@ -8,21 +16,6 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
-import CodePush from "react-native-code-push";
-
-const Colors = {
-  darker: 'black',
-  lighter: 'white',
-}
-
-let codePushOptions = { checkFrequency: CodePush.CheckFrequency.ON_APP_RESUME,
-  installMode: CodePush.InstallMode.IMMEDIATE,
-  mandatoryInstallMode: CodePush.InstallMode.IMMEDIATE,
-  updateDialog: {
-    appendReleaseDescription: true,
-    title: "A new update is available!"
-  }
-};
 
 const App = ()=> {
   const isDarkMode = useColorScheme() === 'dark';
@@ -68,4 +61,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CodePush(codePushOptions)(App);
+export default App;

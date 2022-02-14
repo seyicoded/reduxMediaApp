@@ -8,7 +8,7 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
-import CodePush from "react-native-code-push";
+import codePush from "react-native-code-push";
 
 const Colors = {
   darker: 'black',
@@ -68,4 +68,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CodePush(codePushOptions)(App);
+export default codePush(codePushOptions)(App);
